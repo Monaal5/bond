@@ -104,8 +104,8 @@ export default function LandingPage({ onSignUp, onLogin }) {
       <nav className={`lp-nav ${scrolled ? 'lp-nav-scrolled' : ''}`}>
         <div className="lp-nav-inner">
           <div className="lp-logo">
-            <span className="lp-logo-icon">⬡</span>
-            <span className="lp-logo-text">BondVault</span>
+            <span className="lp-logo-icon" style={{ color: '#ffd700' }}>⬡</span>
+            <span className="lp-logo-text" style={{ background: 'var(--brand-gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>BondVault</span>
           </div>
           <div className="lp-nav-links">
             <a href="#bonds" className="lp-nav-link">Explore Bonds</a>
@@ -114,7 +114,7 @@ export default function LandingPage({ onSignUp, onLogin }) {
           </div>
           <div className="lp-nav-actions">
             <button className="lp-btn-ghost" onClick={onLogin}>Log In</button>
-            <button className="lp-btn-cta" onClick={onSignUp}>
+            <button className="lp-btn-cta" style={{ background: 'var(--green-gradient)', border: 'none', color: 'white' }} onClick={onSignUp}>
               Sign Up Free <span>→</span>
             </button>
           </div>
@@ -136,7 +136,7 @@ export default function LandingPage({ onSignUp, onLogin }) {
             <h1 className="lp-hero-title">{slide.title}</h1>
             <p className="lp-hero-subtitle">{slide.subtitle}</p>
             <div className="lp-hero-actions">
-              <button className="lp-btn-hero-primary" onClick={onSignUp}>
+              <button className="lp-btn-hero-primary" style={{ background: 'var(--green-gradient)', border: 'none', color: 'white' }} onClick={onSignUp}>
                 Start Investing →
               </button>
               <button className="lp-btn-hero-ghost" onClick={onLogin}>
@@ -149,6 +149,7 @@ export default function LandingPage({ onSignUp, onLogin }) {
                 <button
                   key={i}
                   className={`lp-dot-btn ${i === heroSlide ? 'active' : ''}`}
+                  style={{ background: i === heroSlide ? '#059669' : '#cbd5e1' }}
                   onClick={() => setHeroSlide(i)}
                 />
               ))}
@@ -219,7 +220,7 @@ export default function LandingPage({ onSignUp, onLogin }) {
                     <div className="lp-bc-stat-label">Min. Invest</div>
                   </div>
                 </div>
-                <button className="lp-bc-btn" onClick={onSignUp}>Invest Now</button>
+                <button className="lp-bc-btn" style={{ background: 'var(--green-gradient)', border: 'none', color: 'white' }} onClick={onSignUp}>Invest Now</button>
               </div>
             </div>
           ))}
@@ -350,8 +351,8 @@ export default function LandingPage({ onSignUp, onLogin }) {
         <div className="lp-footer-inner">
           <div className="lp-footer-brand">
             <div className="lp-logo" style={{ marginBottom: 12 }}>
-              <span className="lp-logo-icon">⬡</span>
-              <span className="lp-logo-text">BondVault</span>
+              <span className="lp-logo-icon" style={{ color: '#ffd700' }}>⬡</span>
+              <span className="lp-logo-text" style={{ background: 'var(--brand-gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>BondVault</span>
             </div>
             <p className="lp-footer-tagline">India's most trusted bond investment platform. SEBI regulated. Investor-first.</p>
           </div>

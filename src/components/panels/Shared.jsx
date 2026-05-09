@@ -54,7 +54,7 @@ export const Badge = ({ children, color = 'gray' }) => {
         yellow: { bg: 'rgba(245,158,11,0.1)', color: '#d97706' },
         blue: { bg: 'rgba(59,130,246,0.1)', color: '#2563eb' },
         gray: { bg: 'rgba(100,116,139,0.1)', color: '#475569' },
-        gold: { bg: 'rgba(255,215,0,0.15)', color: '#b45309' },
+        gold: { bg: 'rgba(16,185,129,0.15)', color: '#047857' },
     };
     const s = colors[color] || colors.gray;
     return (
@@ -70,9 +70,9 @@ export const kycColor = (s) => ({ verified: 'green', pending: 'yellow', rejected
 export const Avatar = ({ name, src, size = 36, style = {} }) => (
     <div style={{ 
         width: size, height: size, borderRadius: size * 0.28, 
-        background: src ? 'none' : 'linear-gradient(135deg,#ffd700,#ffaa00)', 
+        background: src ? 'none' : 'linear-gradient(135deg,#10b981,#059669)', 
         display: 'flex', alignItems: 'center', justifyContent: 'center', 
-        fontWeight: 800, fontSize: size * 0.38, color: '#1a1200', 
+        fontWeight: 800, fontSize: size * 0.38, color: '#fff', 
         flexShrink: 0, overflow: 'hidden', ...style 
     }}>
         {src ? (
@@ -84,7 +84,7 @@ export const Avatar = ({ name, src, size = 36, style = {} }) => (
 );
 
 export const Card = ({ children, style = {}, gold = false }) => (
-    <div style={{ background: '#fff', borderRadius: 18, padding: 24, border: gold ? '1.5px solid rgba(255,215,0,0.45)' : '1px solid #f1f5f9', boxShadow: '0 4px 20px rgba(0,0,0,0.04)', ...style }}>
+    <div style={{ background: '#fff', borderRadius: 18, padding: 24, border: gold ? '1.5px solid rgba(16,185,129,0.45)' : '1px solid #f1f5f9', boxShadow: '0 4px 20px rgba(0,0,0,0.04)', ...style }}>
         {children}
     </div>
 );
@@ -110,7 +110,7 @@ export const Toggle = ({ checked, onChange }) => (
         <span style={{
             position: 'absolute', inset: 0, borderRadius: 23,
             background: checked ? 'linear-gradient(135deg,#10b981,#059669)' : '#e2e8f0',
-            transition: '0.25s', boxShadow: checked ? '0 2px 8px rgba(5,150,105,0.3)' : 'none',
+            transition: '0.25s', boxShadow: checked ? '0 2px 8px rgba(16,185,129,0.3)' : 'none',
         }}>
             <span style={{
                 position: 'absolute', width: 17, height: 17, borderRadius: '50%', background: '#fff',

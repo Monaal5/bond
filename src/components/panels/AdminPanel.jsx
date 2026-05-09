@@ -190,7 +190,7 @@ export default function AdminPanel({ bonds = [], profiles = [], deals = [], acti
                         <StatCard gold label="Total AUM" value={`₹${(profiles.reduce((s, c) => s + (c.total_invested || 0), 0) / 100000).toFixed(1)}L`} sub="+12% YoY" />
                         <StatCard label="Active Bonds" value={bonds.length} sub="Listed Assets" />
                         <StatCard label="Total Clients" value={clients.length} sub="Onboarded" />
-                        <StatCard gold label="KYC Pending" value={kycRequests.length} sub="Awaiting Review" subColor="#d97706" />
+                        <StatCard gold label="KYC Pending" value={kycRequests.length} sub="Awaiting Review" subColor="#059669" />
                     </div>
 
                     <Card>
